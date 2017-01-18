@@ -16,6 +16,7 @@ namespace Usuario
 
             //ROTATOR
             //rotator.BindingContext = new ClassRotatorViewModel();
+            imgCarrito.Clicked += async (sender, args) => { await Navigation.PushAsync(new CarritoCompras(null)); };
 
             TapGestureRecognizer clickConocenos = new TapGestureRecognizer();
             clickConocenos.Tapped += ClickConocenos_Tapped;

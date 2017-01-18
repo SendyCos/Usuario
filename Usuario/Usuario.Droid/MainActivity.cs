@@ -8,12 +8,28 @@ using Android.Widget;
 using Android.OS;
 using Xamarin.Forms;
 using Android.Content;
+using PayPal.Forms;
+using PayPal.Forms.Abstractions;
+using PayPal.Forms.Abstractions.Enum;
 
 namespace Usuario.Droid
 {
     [Activity(Label = "Usuario", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+        protected override async void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+
+            PayPalManagerImplementation.Manager.OnActivityResult(requestCode, resultCode, data);
+        }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+            PayPalManagerImplementation.Manager.Destroy();
+        }
+
         protected override void OnCreate(Bundle bundle)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
@@ -23,6 +39,15 @@ namespace Usuario.Droid
             Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
             UserDialogs.Init(this);
             
+            CrossPayPalManager.Init(new PayPalConfiguration(PayPalEnvironment.NoNetwork, "Af9bjZ93X40LIUB39bv_AcTH2K98D3koQwlok5KA19Qv_0p2L66McgwleShNjMXj9u7Ipj8ueB4YIIYj")
+            {
+                AcceptCreditCards = true,
+                Language = "es",
+                MerchantName = "El Perolito",
+                MerchantPrivacyPolicyUri = string.Empty,
+                MerchantUserAgreementUri = string.Empty
+            });
+
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());

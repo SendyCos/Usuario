@@ -8,10 +8,10 @@
 
 
 
-  <!-- <ContentPage.ToolbarItems>
+  <ContentPage.ToolbarItems>
     <ToolbarItem Icon="carritonegro.png" x:Name="imgCarrito" Command="{Binding ToolbarItemCommand}"></ToolbarItem>
     <ToolbarItem Icon="lupa11.png" Command="{Binding ToolbarItemCommand}"></ToolbarItem>
-  </ContentPage.ToolbarItems>-->
+  </ContentPage.ToolbarItems>
 
 
 

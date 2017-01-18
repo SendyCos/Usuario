@@ -64,10 +64,7 @@ namespace Usuario
             imgFoto.GestureRecognizers.Add(gestortap1);
         }
 
-        async private void ImgCarrito_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new CarritoCompras());
-        }
+        
 
         private async void BtnSms_Clicked(object sender, EventArgs e)
         {
