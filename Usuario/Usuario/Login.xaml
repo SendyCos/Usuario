@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Usuario.Login"   Title="El Perolito Múzquiz">
+  
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Icon="carritonegro.png" x:Name="imgCarrito" Command="{Binding ToolbarItemCommand}"></ToolbarItem>
+    <ToolbarItem Icon="lupa11.png" Command="{Binding ToolbarItemCommand}"></ToolbarItem>
+  </ContentPage.ToolbarItems>
+
+  <ScrollView>
+
+    <StackLayout Padding="20, 15, 20, 15"  BackgroundColor="Maroon">
+      <StackLayout Orientation="Vertical" VerticalOptions="Center" HeightRequest="120">
+        <Image Source="icon.png" WidthRequest="90" HeightRequest="90" />
+      </StackLayout>
+
+
+      <StackLayout VerticalOptions="Center" HeightRequest="280" >
+        <Label x:Name="mensajeLabel" FontSize="24"></Label>
+        <StackLayout VerticalOptions="Center" HeightRequest="70">
+          <Entry x:Name="UsuarioEntry" Placeholder="Email" HorizontalTextAlignment="Center"></Entry>
+        </StackLayout>
+
+        <StackLayout VerticalOptions="Center" HeightRequest="70" >
+          <Entry x:Name="claveEntry" Placeholder="Contraseña" IsPassword="True" HorizontalTextAlignment="Center"></Entry>
+        </StackLayout>
+
+        <StackLayout>
+          <Button x:Name="btnIniciarSesion" Text="Iniciar Sesion" BackgroundColor="#212121" HorizontalOptions="Center" WidthRequest="850" ></Button>
+        </StackLayout>
+
+        <StackLayout Padding="10">
+          <Button x:Name="lblRecuperarContraseña" Text="Recuperar Contraseña" BackgroundColor="#212121" HorizontalOptions="Center" WidthRequest="850" ></Button>
+         <!--<Label XAlign="Center" x:Name="lblRecuperarContraseña" FontSize="15" Text="Recuperar Contraseña"  ></Label>-->
+        </StackLayout>
+
+      </StackLayout>
+
+      <StackLayout HeightRequest="150" >
+        <StackLayout HeightRequest="60">
+          <Label XAlign="Center" x:Name="lblTextoCuenta" FontSize="18" Text="Registrate para tener acceso a nuestras promociones y cupones."></Label>
+        </StackLayout>
+
+
+        <StackLayout HeightRequest="40">
+          <Button x:Name="btnCrearCuenta" Text="Crear Cuenta"  BackgroundColor="#212121" HorizontalOptions="Center" WidthRequest="850" ></Button>
+        </StackLayout>
+      </StackLayout>
+
+
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

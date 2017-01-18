@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Usuario.Inicio"
+              Title="El Perolito Múzquiz"
+             xmlns:rotator="clr-namespace:Syncfusion.SfRotator.XForms;assembly=Syncfusion.SfRotator.XForms"
+             BackgroundImage="fondCon.jpg">
+
+
+
+  <!-- <ContentPage.ToolbarItems>
+    <ToolbarItem Icon="carritonegro.png" x:Name="imgCarrito" Command="{Binding ToolbarItemCommand}"></ToolbarItem>
+    <ToolbarItem Icon="lupa11.png" Command="{Binding ToolbarItemCommand}"></ToolbarItem>
+  </ContentPage.ToolbarItems>-->
+
+
+
+  <!--//////////////////////////DETAIL///////////////////////////////////-->
+
+  <ScrollView>
+    <StackLayout>
+
+      <Image Source="s2en1.png" WidthRequest="390" HeightRequest="340" BackgroundColor="White" Aspect="Fill"/>
+
+      <!--ROTATOR <StackLayout BackgroundColor="#660000">
+
+  <Label Text="Promociones" FontSize="50" XAlign="Center" TextColor="White"></Label>
+
+      <StackLayout>
+      <rotator:SfRotator x:Name="rotator" HeightRequest="150" Grid.Row="0" NavigationDelay="1000" ItemsSource="{Binding ImageCollection}" SelectedIndex="0" NavigationDirection="Horizontal" NavigationStripMode="Dots" BackgroundColor="Purple" NavigationStripPosition="Bottom" EnableAutoPlay="True">
+        <rotator:SfRotator.ItemTemplate>
+          <DataTemplate>
+            <Image Source="{Binding Image}"/>
+          </DataTemplate>
+        </rotator:SfRotator.ItemTemplate>
+      </rotator:SfRotator>
+      </StackLayout>
+</StackLayout>-->
+
+      <StackLayout Padding="5">
+        <Grid WidthRequest="400" HeightRequest="200" RowSpacing="1" ColumnSpacing="1"  HorizontalOptions="Center">
+
+
+          <Grid.RowDefinitions >
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+          </Grid.RowDefinitions>
+
+          <Grid.ColumnDefinitions >
+            <ColumnDefinition  ></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+
+          </Grid.ColumnDefinitions>
+
+          <Image Grid.Row="0" Grid.Column="0" x:Name="btnMenuu" Source="BMenu.png" BackgroundColor="Transparent" WidthRequest="20" > </Image>
+          <Image Grid.Row="0" Grid.Column="1" x:Name="btnconocenos" Source="BConocenos.png" BackgroundColor="Transparent" WidthRequest="20"></Image>
+          <Image Grid.Row="0" Grid.Column="2" x:Name="btngaleria" Source="BGaleria.png" BackgroundColor="Transparent" WidthRequest="20" ></Image>
+
+          <Image Grid.Row="1" Grid.Column="0"  x:Name="btncontaacto" Source="BContactanos.png" BackgroundColor="Transparent" WidthRequest="20" ></Image>
+          <Image Grid.Row="1" Grid.Column="1"  x:Name="btnreservac" Source="BReservacion.png" BackgroundColor="Transparent" WidthRequest="20" ></Image>
+          <Image Grid.Row="1" Grid.Column="2"  x:Name="btnpromo" Source="BPromociones.png" BackgroundColor="Transparent" WidthRequest="20"></Image>
+
+        </Grid>
+      </StackLayout>
+    </StackLayout>
+  </ScrollView>
+  
+</ContentPage>

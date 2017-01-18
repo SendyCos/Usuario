@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Usuario.Carrusel">
+  
+  <ContentPage BackgroundImage="Imagen4.png" >
+    <ContentPage.Content >
+      <StackLayout Orientation="Vertical" VerticalOptions="Center" HeightRequest="500" >
+
+        <StackLayout Margin="0, 45">
+          <Image Source="cuchillos.png"  WidthRequest="100" Margin="5,5,5,5"/>
+          <Label Text="¡Bienvenidos!" XAlign="Center" FontAttributes="Bold" FontSize="25"></Label>
+        </StackLayout>
+        
+     <Label XAlign="Center" Text="Nos apasiona la comida y queremos que puedas disfrutarlo todo de la manera más fácil" FontSize="20" Margin="10">
+        <Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+          <OnPlatform.Android >segoeuil.ttf#segoeuil.ttf#</OnPlatform.Android>
+        </OnPlatform>
+      </Label.FontFamily>
+      </Label>
+      </StackLayout>
+    </ContentPage.Content>
+  </ContentPage>
+<!--
+
+  <ContentPage BackgroundColor="#FFD54F">
+    <ContentPage.Content >
+      <StackLayout Orientation="Vertical" VerticalOptions="Center" HeightRequest="500" >
+        <StackLayout Margin="0, 60">
+          <Image Source="ca1.png" WidthRequest="200" />
+        </StackLayout>
+        <Label XAlign="Center" Text="Recibe notificaciones de nuestras promociones del día"  FontSize="20"></Label>
+      </StackLayout>
+    </ContentPage.Content>
+  </ContentPage>
+
+
+  <ContentPage BackgroundColor="#9575CD" >
+    <ContentPage.Content >
+      <StackLayout Orientation="Vertical" VerticalOptions="Center" HeightRequest="500">
+
+        <StackLayout Margin="0, 60">
+          <Image Source="ca4.png" WidthRequest="200" />
+        </StackLayout >
+        <Label XAlign="Center" Text="Revisa nuestro menú en linea, fácil y sencillo"  FontSize="20"  ></Label>
+      </StackLayout>
+    </ContentPage.Content>
+  </ContentPage>-->
+
+  <ContentPage  BackgroundImage="perolito.jpg">
+    <ContentPage.Content >
+      <StackLayout Orientation="Vertical" VerticalOptions="Center" HeightRequest="500">
+
+        <StackLayout Margin="0, 60">
+          <Image Source="icon.png" HeightRequest="150" />
+          
+        </StackLayout>
+       
+        <Button x:Name="btnComenzamos" Text="Comenzamos" BackgroundColor="#212121" Margin="0, 40" TextColor="White" HorizontalOptions="Center" WidthRequest="300" BorderColor="Maroon">
+          <Button.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+          <OnPlatform.Android >segoeuil.ttf#segoeuil.ttf#</OnPlatform.Android>
+        </OnPlatform>
+          </Button.FontFamily>
+        </Button>
+      </StackLayout>
+    </ContentPage.Content>
+  </ContentPage>
+</CarouselPage>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Usuario.CarritoCompras" Title="El Perolito Múzquiz" BackgroundColor="#660000"
+              xmlns:sflstView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:localConverters="clr-namespace:Usuario.Converters;assembly=Usuario"
+             xmlns:cached="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <localConverters:DoubleMoneyConverter x:Key="DoubleMoneyConverter"></localConverters:DoubleMoneyConverter>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="7*"></RowDefinition>
+      <RowDefinition></RowDefinition>
+      <RowDefinition></RowDefinition>
+    </Grid.RowDefinitions>
+    <sflstView:SfListView x:Name="lstCarrito" ItemSpacing="5" ItemSize="65" AllowSwiping="True" SelectionMode="None" SwipeOffset="360" SwipeThreshold="30">
+      <sflstView:SfListView.RightSwipeTemplate>
+        <DataTemplate x:Name="RightSwipeTemplate">
+          <Grid BackgroundColor="#DC595F" HorizontalOptions="Fill" VerticalOptions="Fill">
+            <Grid VerticalOptions="Center" HorizontalOptions="Center">
+              <Image Grid.Column="0"
+                     Grid.Row="0"
+                     HeightRequest="35"
+                     WidthRequest="35"
+                     BackgroundColor="Transparent"
+                     Source="garbage.png" />
+            </Grid>
+          </Grid>
+        </DataTemplate>
+      </sflstView:SfListView.RightSwipeTemplate>
+      <sflstView:SfListView.ItemTemplate>
+        <DataTemplate>
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*"></ColumnDefinition>
+              <ColumnDefinition Width="2*"></ColumnDefinition>
+              <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <cached:CachedImage Source="{Binding Imagen}" Grid.RowSpan="2"></cached:CachedImage>
+            <Label Grid.Column="1" Text="{Binding Nombre}" VerticalOptions="Center" FontSize="26"></Label>
+            <Label Grid.Column="2" Text="{Binding Precio, Converter={StaticResource DoubleMoneyConverter}}" FontSize="26" VerticalOptions="Center"></Label>
+          </Grid>
+        </DataTemplate>
+      </sflstView:SfListView.ItemTemplate>
+    </sflstView:SfListView>
+    <StackLayout Grid.Row="1" Orientation="Horizontal" HorizontalOptions="Center">
+      <Label Text="Total: " FontSize="46"></Label>
+      <Label x:Name="lblTotal" Text="0.00" FontSize="46"></Label>
+    </StackLayout>
+    <Button Grid.Row="2" x:Name="btnCheckout" Text="Reservar Pedido"></Button>
+  </Grid>
+</ContentPage>

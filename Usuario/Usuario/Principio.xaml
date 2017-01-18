@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Usuario.Principio">
+
+  <MasterDetailPage.Master >
+    <ContentPage Title="Menú" >
+      <!--//////////
+      ////////////////HEADER///////////////////////////////-->
+      <StackLayout BackgroundColor="#212121">
+
+        <StackLayout HorizontalOptions="Center" Padding="5"  HeightRequest="170" VerticalOptions="Center">
+          <StackLayout HeightRequest="30"></StackLayout>
+          <Image Source="icon.png" WidthRequest="90" HeightRequest="90" />
+          <Label x:Name="lblUsuario" Text="Bienvenido" HorizontalOptions="Center" FontSize="20" TextColor="White" ></Label>
+          <BoxView HeightRequest="2" BackgroundColor="#b71c1c" WidthRequest="270"></BoxView>
+
+        </StackLayout>
+
+
+        <!--//////////////////////////CONTENT///////////////////////////////-->
+
+        <ListView x:Name="lstView" SeparatorVisibility="None" >
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <ViewCell>
+                <StackLayout Orientation="Horizontal" Padding="10" >
+                  <Image Source="{Binding Imagen}" WidthRequest="30" ></Image>
+                  <Label Text="{Binding Texto}" FontSize="15" TextColor="White"></Label>
+                </StackLayout>
+              </ViewCell>
+            </DataTemplate>
+          </ListView.ItemTemplate>
+        </ListView>
+
+        <!--//////////////////////////FOOTER///////////////////////////////-->
+
+
+        <!--<StackLayout Padding="10">
+         <Label Text="Cerrar Sesión" HorizontalOptions="Center" FontSize="15" ></Label>
+      </StackLayout>-->
+      </StackLayout>
+    </ContentPage>
+
+  </MasterDetailPage.Master>
+
+
+  <MasterDetailPage.Detail>
+
+  </MasterDetailPage.Detail>
+
+  <!--//////////////////////////FINDETAIL///////////////////////////////////-->
+
+</MasterDetailPage>

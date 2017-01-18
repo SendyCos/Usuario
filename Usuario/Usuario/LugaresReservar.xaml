@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Usuario.LugaresReservar" Title="El Perolito Múzquiz">
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Icon="carritonegro.png" x:Name="imgCarrito" Command="{Binding ToolbarItemCommand}"></ToolbarItem>
+    <ToolbarItem Icon="lupa11.png" Command="{Binding ToolbarItemCommand}"></ToolbarItem>
+  </ContentPage.ToolbarItems>
+  <ScrollView>
+    <StackLayout Padding="20, 10, 20, 10"  BackgroundColor="Maroon">
+
+      <StackLayout Orientation="Horizontal"  HeightRequest="60" >
+
+
+        <Label  x:Name="lblTextoCuenta" FontSize="40" Text="Registrarse"  XAlign="Center" ></Label>
+      </StackLayout>
+
+
+      <StackLayout WidthRequest="700" HeightRequest="290">
+        <Image x:Name="imgReservarMesa"  Source="perolll.jpg"></Image>
+      </StackLayout>
+
+      <StackLayout Padding="5">
+        <Grid WidthRequest="400" HeightRequest="50" RowSpacing="1" ColumnSpacing="1"  HorizontalOptions="Center">
+
+
+          <Grid.RowDefinitions >
+            <RowDefinition ></RowDefinition>
+
+          </Grid.RowDefinitions>
+
+          <Grid.ColumnDefinitions >
+            <ColumnDefinition  ></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+
+
+          </Grid.ColumnDefinitions>
+
+          <StackLayout HorizontalOptions="Center" HeightRequest="60" Grid.Row="0" Grid.Column="0">
+            <Label x:Name="lblMesas" Text="Número de Mesa" TextColor="White"></Label>
+            <Picker SelectedIndex="0" x:Name="txtMesas" Title="-"  HorizontalOptions="Center" WidthRequest="25"  TextColor="White">
+              <Picker.Items>
+                <x:String>1</x:String>
+                <x:String>2</x:String>
+                <x:String>3</x:String>
+                <x:String>4</x:String>
+                <x:String>5</x:String>
+                <x:String>6</x:String>
+                <x:String>7</x:String>
+                <x:String>8</x:String>
+                <x:String>9</x:String>
+                <x:String>10</x:String>
+              </Picker.Items>
+            </Picker>
+          </StackLayout>
+
+          <StackLayout HorizontalOptions="Center" HeightRequest="60" Grid.Row="0" Grid.Column="1">
+            <Label x:Name="lblCantidadPersonas" Text="Cantidad de Personas" TextColor="White"></Label>
+            <Picker SelectedIndex="0" x:Name="txtPersonas" Title="-" HorizontalOptions="Center" WidthRequest="25"  TextColor="White">
+              <Picker.Items>
+                <x:String>1</x:String>
+                <x:String>2</x:String>
+                <x:String>3</x:String>
+                <x:String>4</x:String>
+                <x:String>5</x:String>
+                <x:String>6</x:String>
+                <x:String>7</x:String>
+                <x:String>8</x:String>
+                <x:String>9</x:String>
+                <x:String>10</x:String>
+              </Picker.Items>
+            </Picker>
+          </StackLayout>
+        </Grid>
+      </StackLayout>
+      <StackLayout VerticalOptions="Center" >
+        <DatePicker x:Name="txtFecha" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="100"></DatePicker>
+      </StackLayout>
+
+      <ActivityIndicator x:Name="ActivityIndicator" HeightRequest="15"></ActivityIndicator>
+
+      <StackLayout HeightRequest="40">
+        <Button x:Name="btnReservar" Text="Reservar" BackgroundColor="#212121" HorizontalOptions="Center" WidthRequest="850"></Button>
+      </StackLayout>
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

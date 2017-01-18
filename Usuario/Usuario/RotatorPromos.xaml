@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Usuario.RotatorPromos" xmlns:rotator="clr-namespace:Syncfusion.SfRotator.XForms;assembly=Syncfusion.SfRotator.XForms">
+  <StackLayout BackgroundColor="#660000">
+
+    <Label Text="Promociones" FontSize="50" XAlign="Center" ></Label>
+
+    <StackLayout>
+      <rotator:SfRotator x:Name="rotator"  HeightRequest="250" NavigationDelay="1000"  SelectedIndex="0" NavigationDirection="Horizontal" NavigationStripMode="Dots"  NavigationStripPosition="Bottom" EnableAutoPlay="True">
+
+      </rotator:SfRotator>
+    </StackLayout>
+    <Label Text="Nosotros tenemos para ti las mejores promociones, ¡ven a emperolarte con nosotros!" XAlign="Center"  HeightRequest="50"  FontSize="16" TextColor="White"></Label>
+  </StackLayout>
+
+
+</ContentPage>

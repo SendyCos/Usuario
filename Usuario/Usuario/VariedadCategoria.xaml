@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Usuario.VariedadCategoria"  Title="El Perolito Múzquiz" BackgroundColor="Maroon">
+  <ScrollView>
+    <ListView x:Name="lstPlatilloss" RowHeight="100" Margin="10"  ItemSelected="LstPlatilloss_OnItemSelected" BackgroundColor="White" >
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <!--<ViewCell>
+        <StackLayout Orientation="Vertical" Padding="10">
+          <Label Text="{Binding Nombre}" FontSize="22" >
+            <Label.FontFamily>
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.Android >segoeuib.ttf#segoeuib.ttf#</OnPlatform.Android>
+              </OnPlatform>
+            </Label.FontFamily>
+          </Label>
+          <StackLayout Padding="10">
+            <Label Text="{Binding Descripciom}" FontSize="18" TextColor="Maroon" >
+              <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                  <OnPlatform.Android >segoeuil.ttf#segoeuil.ttf#</OnPlatform.Android>
+                </OnPlatform>
+              </Label.FontFamily>
+            </Label>
+            
+          </StackLayout>
+        </StackLayout>
+      </ViewCell>-->
+        <ImageCell ImageSource="{Binding urlImagen}" Text="{Binding Nombre}" Detail="{Binding Descripciom}" ></ImageCell>
+      
+        <!--<TextCell  Text="{Binding Nombre}" Detail="{Binding Descripcion}"></TextCell>-->
+      </DataTemplate>
+    </ListView.ItemTemplate>
+</ListView>
+  </ScrollView>
+  
+</ContentPage>

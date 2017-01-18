@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Usuario.Registrar"  Title="El Perolito Múzquiz" BackgroundImage="Cuenta.png" >
+  <ScrollView>
+    <StackLayout Padding="20, 10, 20, 10"  >
+
+      <Label  x:Name="lblTextoCuenta" FontSize="42" Text="Registrarse" Margin="0,10,0,25" HorizontalOptions="Center" TextColor="White"></Label>
+
+      <StackLayout VerticalOptions="Center" HeightRequest="60">
+        <Entry x:Name="lblNombre" Placeholder="Nombre" HorizontalTextAlignment="Center" TextColor="White"></Entry>
+      </StackLayout>
+
+      <StackLayout VerticalOptions="Center" HeightRequest="60">
+        <Entry x:Name="lblApellido" Placeholder="Apellido" HorizontalTextAlignment="Center" TextColor="White"></Entry>
+      </StackLayout>
+
+      <StackLayout VerticalOptions="Center" HeightRequest="60">
+        <Entry x:Name="lblTelefono" Placeholder="Teléfono" HorizontalTextAlignment="Center" TextColor="White"></Entry>
+      </StackLayout>
+
+      <StackLayout VerticalOptions="Center" HeightRequest="60"  >
+        <Entry  x:Name="lblDirecc" Placeholder="Dirección" IsPassword="True" HorizontalTextAlignment="Center" TextColor="White"></Entry>
+      </StackLayout>
+
+      <StackLayout VerticalOptions="Center" HeightRequest="60">
+        <Entry x:Name="lblCorreo" Placeholder="Correo" HorizontalTextAlignment="Center" TextColor="White"></Entry>
+      </StackLayout>
+
+      <StackLayout VerticalOptions="Center" HeightRequest="60"  >
+        <Entry  x:Name="lblContraseña" Placeholder="Contraseña" IsPassword="True" HorizontalTextAlignment="Center" TextColor="White"></Entry>
+      </StackLayout>
+
+
+
+
+      <Button x:Name="btnCrearRegistrar" Text="Registrar" BackgroundColor="Maroon" HorizontalOptions="Center" WidthRequest="850" ></Button>
+
+
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

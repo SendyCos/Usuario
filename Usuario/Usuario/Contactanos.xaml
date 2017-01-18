@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Usuario.Contactanos" Title="El Perolito Múzquiz">
+
+
+  <ScrollView>
+    <StackLayout BackgroundColor="#660000" >
+      <Label XAlign="Center" FontSize="30" Text="Contactános" TextColor="White" >
+        <Label.FontFamily>
+          <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.Android >segoeuib.ttf#segoeuib.ttf#</OnPlatform.Android>
+          </OnPlatform>
+        </Label.FontFamily>
+      </Label>
+      <StackLayout>
+        <Label XAlign="Center" FontSize="20" Text="¡Ven a emperolarte con nosotros!" TextColor="White">
+          <Label.FontFamily>
+            <OnPlatform x:TypeArguments="x:String">
+              <OnPlatform.Android >segoeuil.ttf#segoeuil.ttf#</OnPlatform.Android>
+            </OnPlatform>
+          </Label.FontFamily>
+        </Label>
+
+        <Image Source="emperolarte.jpg" x:Name="imgemperolarte"  WidthRequest="700" HeightRequest="100"></Image>
+      </StackLayout >
+      
+      <StackLayout Orientation="Horizontal"  WidthRequest="600" Margin="10">
+        <StackLayout WidthRequest="300" BackgroundColor="Maroon">
+          <Label XAlign="Center" Text="Dirección:" FontSize="20" FontAttributes="Bold" TextColor="White">
+            <Label.FontFamily>
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.Android >segoeuib.ttf#segoeuib.ttf#</OnPlatform.Android>
+              </OnPlatform>
+            </Label.FontFamily>
+          </Label>
+          <Label XAlign="Center" Text="{Binding Direccion}" x:Name="lblDireccion" FontSize="15" TextColor="White" WidthRequest="200" HeightRequest="100">
+            <Label.FontFamily>
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.Android >segoeuil.ttf#segoeuil.ttf#</OnPlatform.Android>
+              </OnPlatform>
+            </Label.FontFamily>
+          </Label>
+        </StackLayout>
+
+        <StackLayout  WidthRequest="300" BackgroundColor="Maroon">
+          <Label XAlign="Center" Text="Horario:" FontSize="20" FontAttributes="Bold" TextColor="White">
+            <Label.FontFamily>
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.Android >segoeuib.ttf#segoeuib.ttf#</OnPlatform.Android>
+              </OnPlatform>
+            </Label.FontFamily>
+          </Label>
+          <Label XAlign="Center" Text="{Binding Horario}" x:Name="lblHorario" FontSize="15" TextColor="White" WidthRequest="200" HeightRequest="100">
+            <Label.FontFamily>
+              <OnPlatform x:TypeArguments="x:String">
+                <OnPlatform.Android >segoeuil.ttf#segoeuil.ttf#</OnPlatform.Android>
+              </OnPlatform>
+            </Label.FontFamily>
+          </Label>
+        </StackLayout>
+      </StackLayout>
+
+
+      <StackLayout Orientation="Horizontal" Margin="5" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="70">
+        <Label Text="{Binding Telefono}" x:Name="lblllamar"></Label>
+        <Button x:Name="btnLlamada" Image="llamada11.png" BackgroundColor="Transparent" WidthRequest="70" HeightRequest="50"></Button>
+        <Label Text="{Binding Telefono}" x:Name="lblMsj"></Label>
+        <Button x:Name="btnSms" Image="msms11.png" BackgroundColor="Transparent" WidthRequest="70" HeightRequest="50" ></Button>
+        <Button x:Name="btnCorreo" Image="correo123.png" BackgroundColor="Transparent" WidthRequest="70" HeightRequest="50"></Button>
+        <Button x:Name="btnSitioWeb" Image="sitioweb11.png" BackgroundColor="Transparent" WidthRequest="70" HeightRequest="50" ></Button>
+      </StackLayout>
+
+      <StackLayout Orientation="Horizontal" WidthRequest="600" HeightRequest="200"  HorizontalOptions="Center">
+        <Image x:Name="imgFoto"  Source="mapa.png"  BackgroundColor="Gray"></Image>
+      </StackLayout>
+
+
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

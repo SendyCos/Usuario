@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Usuario.DatosPago"  >
+  <ContentPage.ToolbarItems>
+    <ToolbarItem x:Name="imgCarrito" Icon="carritonegro.png" Command="{Binding ToolbarItemCommand}"></ToolbarItem>
+    <ToolbarItem Icon="lupa11.png" Command="{Binding ToolbarItemCommand}"></ToolbarItem>
+  </ContentPage.ToolbarItems>
+
+  <ScrollView>
+    <StackLayout>
+      <StackLayout Orientation="Horizontal" BackgroundColor="Green">
+        <Label Text="Total de la orden"></Label>
+        <Label Text="$..."></Label>
+      </StackLayout>
+
+      <StackLayout>
+
+        <Label Text="1. Tus datos" FontAttributes="Bold"></Label>
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Nombre:"></Label>
+          <Entry  WidthRequest="300" Keyboard="Text"></Entry>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Apellidos:"></Label>
+          <Entry WidthRequest="300" Keyboard="Text"></Entry>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Correo:"></Label>
+          <Entry WidthRequest="300" Keyboard="Email"></Entry>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Celular:"></Label>
+          <Entry WidthRequest="150" Keyboard="Numeric"></Entry>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Calle:"></Label>
+          <Entry WidthRequest="300" Keyboard="Text"></Entry>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Número:"></Label>
+          <Entry WidthRequest="80" Keyboard="Numeric"></Entry>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Colonia:"></Label>
+          <Entry WidthRequest="300" Keyboard="Text"></Entry>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Entre calles:"></Label>
+          <Entry WidthRequest="300"  Keyboard="Text"></Entry>
+        </StackLayout>
+
+
+        <Button Text="Confirmar" x:Name="btnConfirmar"></Button>
+      </StackLayout>
+
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

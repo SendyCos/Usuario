@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Usuario.ListaPromociones"   Title="El Perolito Múzquiz" BackgroundColor="Maroon">
+  
+
+  <ScrollView>
+
+    <StackLayout >
+    
+      <StackLayout Orientation="Horizontal" Padding="5" HorizontalOptions="Center">
+        <Image Source="ca1.png" WidthRequest="50"></Image>
+      <Label Text="Promociones" HorizontalOptions="Center" FontSize="30" TextColor="White">
+        <Label.FontFamily>
+          <OnPlatform x:TypeArguments="x:String">
+            <OnPlatform.Android >segoeuib.ttf#segoeuib.ttf#</OnPlatform.Android>
+          </OnPlatform>
+        </Label.FontFamily>
+      </Label>
+      
+        </StackLayout >
+      <ListView x:Name="lsvPromociones" ItemSelected="lsvPromociones_Selected" Margin="5" RowHeight="70" BackgroundColor="#E0E0E0" Opacity="5">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ImageCell Text="{Binding Nombre}" TextColor="Maroon" ImageSource="{Binding urlImagen}" Detail="{Binding Descripcion}" DetailColor="Maroon" >
+             
+            </ImageCell>
+          </DataTemplate>
+
+        </ListView.ItemTemplate>
+      </ListView>
+ 
+    </StackLayout>
+
+  </ScrollView>
+</ContentPage>

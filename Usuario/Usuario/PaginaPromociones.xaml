@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Usuario.PaginaPromociones"   Title="El Perolito Múzquiz" BackgroundColor="Maroon">
+  
+      <ScrollView>
+        <StackLayout Margin="10" BackgroundColor="White" Orientation="Vertical">
+        <StackLayout >
+        <Label XAlign="Center" x:Name="lblnombre" FontSize="30" Text="{Binding Nombre}">
+          <Label.FontFamily>
+            <OnPlatform x:TypeArguments="x:String">
+              <OnPlatform.Android >segoeuib.ttf#segoeuib.ttf#</OnPlatform.Android>
+            </OnPlatform>
+          </Label.FontFamily>
+        </Label>
+      </StackLayout>
+
+      <StackLayout HeightRequest="250" Margin="10">
+        <Image Source="{Binding urlImagen}"  x:Name="lblImagen" />
+      </StackLayout>
+
+   <StackLayout HeightRequest="50"></StackLayout>
+        <StackLayout >
+        <Label XAlign="Center" x:Name="lbldescrrip" FontSize="20" Text="{Binding Descripcion}" >
+            <Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+          <OnPlatform.Android >segoeuil.ttf#segoeuil.ttf#</OnPlatform.Android>
+        </OnPlatform>
+      </Label.FontFamily>
+        </Label>
+        </StackLayout>
+      
+        
+         <StackLayout>
+        <Label XAlign="Center" x:Name="lbldia" FontSize="30" Text="{Binding Dia}" TextColor="Maroon" >
+          <Label.FontFamily>
+            <OnPlatform x:TypeArguments="x:String">
+              <OnPlatform.Android >segoeuib.ttf#segoeuib.ttf#</OnPlatform.Android>
+            </OnPlatform>
+          </Label.FontFamily>
+        </Label>
+      </StackLayout>
+        </StackLayout>
+    
+   
+</ScrollView>
+  
+</ContentPage>

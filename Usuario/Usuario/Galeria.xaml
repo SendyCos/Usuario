@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Usuario.Galeria"
+               xmlns:carousel="clr-namespace:Syncfusion.SfCarousel.XForms;assembly=Syncfusion.SfCarousel.XForms" BackgroundColor="Maroon"
+             Title="El Perolito Múzquiz"
+  >
+   <ScrollView>
+
+
+     <StackLayout Margin="5,5,5,5" >
+       <StackLayout >
+         <Label Text="Galería" FontSize="30" XAlign="Center" TextColor="White">
+           <Label.FontFamily>
+             <OnPlatform x:TypeArguments="x:String">
+               <OnPlatform.Android >segoeuib.ttf#segoeuib.ttf#</OnPlatform.Android>
+             </OnPlatform>
+           </Label.FontFamily>
+         </Label>
+       </StackLayout>
+
+       <StackLayout >
+         <carousel:SfCarousel x:Name="carrusel" HeightRequest="300" WidthRequest="150" ></carousel:SfCarousel>
+
+       </StackLayout>
+       <StackLayout>
+
+         <Label Text="Ven a disfrutar una noche agradable, con tus amigos" XAlign="Center"  HeightRequest="70" FontSize="22" TextColor="White">
+           <Label.FontFamily>
+             <OnPlatform x:TypeArguments="x:String">
+               <OnPlatform.Android >segoeuil.ttf#segoeuil.ttf#</OnPlatform.Android>
+             </OnPlatform>
+           </Label.FontFamily>
+         </Label>
+       </StackLayout >
+     </StackLayout >
+   </ScrollView>
+        
+    
+</ContentPage>

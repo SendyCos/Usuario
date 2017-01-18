@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Usuario.Conocenos"  Title="El Perolito Múzquiz" BackgroundColor="Maroon">
+
+
+  <!-- <ContentPage.ToolbarItems>
+    <ToolbarItem Icon="carritonegro.png" x:Name="imgCarrito" Command="{Binding ToolbarItemCommand}"></ToolbarItem>
+    <ToolbarItem Icon="lupa11.png" Command="{Binding ToolbarItemCommand}"></ToolbarItem>
+  </ContentPage.ToolbarItems>-->
+
+<ScrollView>
+  <StackLayout   Margin="10">
+    <Label XAlign="Center" x:Name="lblC1" FontSize="30" Text="Conocénos" TextColor="White">
+      <Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+          <OnPlatform.Android >segoeuib.ttf#segoeuib.ttf#</OnPlatform.Android>
+        </OnPlatform>
+      </Label.FontFamily>
+    </Label>
+
+    <Image Source="peroli.jpg" x:Name="imgPerol" Aspect="Fill"  HeightRequest="250" Margin="0,  15" ></Image>
+    
+
+    <Label XAlign="Center"  HeightRequest="220" x:Name="lblHistoria" FontSize="16" TextColor="White" Text="{Binding Historia}" >
+        <Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+          <OnPlatform.Android >segoeuil.ttf#segoeuil.ttf#</OnPlatform.Android>
+        </OnPlatform>
+      </Label.FontFamily>
+    </Label>
+
+
+  </StackLayout>
+
+</ScrollView>
+</ContentPage>
