@@ -118,6 +118,14 @@
       <HintPath>..\..\packages\modernhttpclient.2.4.1\lib\MonoAndroid\OkHttp.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PayPal.Forms, Version=1.0.6108.27293, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PayPal.Forms.2.15.5\lib\MonoAndroid10\PayPal.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PayPal.Forms.Abstractions, Version=1.0.6108.27287, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PayPal.Forms.2.15.5\lib\MonoAndroid10\PayPal.Forms.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Plugin.Messaging, Version=3.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xam.Plugins.Messaging.3.2.1\lib\MonoAndroid10\Plugin.Messaging.dll</HintPath>
       <Private>True</Private>
@@ -250,6 +258,14 @@
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.3.3.175\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.PayPal.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PayPal.Forms.2.15.5\lib\MonoAndroid10\Xamarin.PayPal.Android.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.PayPal.Android.CardIO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PayPal.Forms.2.15.5\lib\MonoAndroid10\Xamarin.PayPal.Android.CardIO.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
