@@ -174,6 +174,14 @@
       <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PayPal.Forms, Version=1.0.6108.27298, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PayPal.Forms.2.15.5\lib\Xamarin.iOS10\PayPal.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PayPal.Forms.Abstractions, Version=1.0.6108.27287, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PayPal.Forms.2.15.5\lib\Xamarin.iOS10\PayPal.Forms.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Plugin.Messaging, Version=3.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xam.Plugins.Messaging.3.2.1\lib\Xamarin.iOS10\Plugin.Messaging.dll</HintPath>
       <Private>True</Private>
@@ -278,6 +286,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="Xamarin.PayPal.iOS, Version=1.0.6108.27256, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PayPal.Forms.2.15.5\lib\Xamarin.iOS10\Xamarin.PayPal.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Usuario\Usuario.csproj">

@@ -6,6 +6,7 @@
     "Microsoft.Azure.Mobile.Client.SQLiteStore": "2.1.1",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
     "Newtonsoft.Json": "9.0.1",
+    "PayPal.Forms": "2.15.5",
     "Syncfusion.Xamarin.SfCarousel": "14.4.0.15",
     "Syncfusion.Xamarin.SfListView": "14.4.0.20",
     "Syncfusion.Xamarin.SfRating": "14.4.0.20",
